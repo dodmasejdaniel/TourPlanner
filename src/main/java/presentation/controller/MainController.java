@@ -1,9 +1,9 @@
 package presentation.controller;
 
-import presentation.model.TourListModel;
-import presentation.model.TourModel;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import presentation.model.TourListModel;
+import presentation.model.TourModel;
 
 import java.net.URL;
 import java.util.ResourceBundle;

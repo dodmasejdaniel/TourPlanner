@@ -192,6 +192,7 @@ public class PersistencePostGres implements IPersistence {
     public boolean tourLogExists(String date) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
+        // use setparaneter to prevent sql injections
         List<TourLog> res = session.createQuery("SELECT t from TourLog t where t.date = :date", TourLog.class).setParameter("date",date).list();
         session.getTransaction().commit();
         session.close();

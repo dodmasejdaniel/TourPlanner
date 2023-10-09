@@ -51,7 +51,7 @@ public class TourModel {
         tm.setTourFrom(t.getStartLocation());
         tm.setTourInfo(t.getRouteInfo());
         tm.setTourEstTime(t.getEstimatedTime());
-        tm.setTourRating(t.getRatings());
+        tm.setTourRating(t.getRatings() == null ? 0 : t.getRatings());
         tm.setTourTransport(t.getTransportType());
         return tm;
     }
